@@ -1,0 +1,17 @@
+lr: 0.001
+min_lr: 0.001
+weight_decay: 0.00001 # l2 norm
+patience: 2 # Number of epochs with no improvement after which learning rate will be reduced
+es_patience: 2 #patience for early stop
+
+dropout_rate: 0.2
+num_blocks: 1
+num_heads: 2
+
+## item embedding
+embedding_dim: 64
+# embedding_dim:
+  # ID: 48  #item ID
+  # cate: 16  #item ID
+
+num_neg: 1280

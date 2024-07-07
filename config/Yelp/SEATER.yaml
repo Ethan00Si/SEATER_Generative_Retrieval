@@ -1,0 +1,40 @@
+lr: 0.001
+min_lr: 0.001
+weight_decay: 0.00001 # l2 norm
+es_patience: 4 #patience for early stop
+
+
+## item embedding, used for encoder
+embedding_dim: 64
+
+d_model: 64
+
+Encoder:
+  N_layer: 1
+  nhead: 2
+  inner_dim: 256
+  dropout: 0.2
+
+Decoder:
+  N_layer: 1
+  nhead: 2
+  inner_dim: 256
+  dropout: 0.2
+
+
+## decoder item index
+decoder_index:
+  vocab_size: 10 # will be rewriten according to the tree # radix, such as decimal
+  embedding_dim: 64 
+  tree_nodes_num: 4863 # will be rewriten according to the tree
+  max_len: 6 # will be rewriten according to the tree
+
+rk_weight: 0.05
+
+rk_num_neg: 4
+rk_margin: 0.001
+
+rk_act : 'sigmoid'
+
+sm_temp: 0.3
+sm_weight: 0.05
