@@ -1,0 +1,3 @@
+# Explanation for the gap of NDCG between our paper and several baseline works
+ Several baseline works calculate the NDCG scores incorrectly, which has given rise to numerous discussions in their official GitHub Repositories, including Comirec (\url{https://github.com/THUDM/ComiRec/issues/6}), Re4 (line 179 in \url{https://github.com/DeerSheep0314/Re4-Learning-to-Re-contrast-Re-attend-Re-construct-for-Multi-interest-Recommendation/blob/main/src/model.py}) and RecForest (\url{https://github.com/wuchao-li/RecForest/issues/2}). 
+ We fixed the issue by calculating IDCG (Ideal Discounted Cumulative Gain) using all positive items, instead of only considering the recalled positives used in those baselines which resulted in falsely higher NDCG in the above-mentioned papers.  
