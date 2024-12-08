@@ -1,6 +1,6 @@
 # Generative Retrieval with Semantic Tree-Structured Item Identifiers via Contrastive Learning
 
-This is the official implementation of the paper "Generative Retrieval with Semantic Tree-Structured Item Identifiers via Contrastive Learning" based on PyTorch. 
+This is the official implementation of the paper "Generative Retrieval with Semantic Tree-Structured Item Identifiers via Contrastive Learning" based on PyTorch. [[Arxiv]](https://arxiv.org/pdf/2309.13375) [[ACM]](https://dl.acm.org/doi/10.1145/3673791.3698408)
 
 ## Overview
 
@@ -59,7 +59,7 @@ python3 main.py --name SEATER_Books --dataset_name Books --gpu_id 0 --model SEAT
 python3 main.py --name SEATER_News --dataset_name MIND --gpu_id 0 --model SEATER --vocab 8
 ```
 
-Note that we have provided **training logs** for three datasets respectively in `./workspace/Books`.
+Note that we have provided **training logs** for Amazon datasets respectively in `./workspace/Books`.
 
 ### Environments
 
@@ -76,13 +76,21 @@ CPU: Intel(R) Xeon(R) Gold 6230R CPU @ 2.10GHz
 Please cite our paper if you use this repository.
 
 ```
-@misc{si2023SEATER,
-      title={Generative Retrieval with Semantic Tree-Structured Item Identifiers via Contrastive Learning}, 
-      author={Zihua Si and Zhongxiang Sun and Jiale Chen and Guozhang Chen and Xiaoxue Zang and Kai Zheng and Yang Song and Xiao Zhang and Jun Xu and Kun Gai},
-      year={2023},
-      eprint={2309.13375},
-      archivePrefix={arXiv},
-      primaryClass={cs.IR},
-      url={https://arxiv.org/abs/2309.13375}, 
+@inproceedings{10.1145/3673791.3698408,
+author = {Si, Zihua and Sun, Zhongxiang and Chen, Jiale and Chen, Guozhang and Zang, Xiaoxue and Zheng, Kai and Song, Yang and Zhang, Xiao and Xu, Jun and Gai, Kun},
+title = {Generative Retrieval with Semantic Tree-Structured Identifiers and Contrastive Learning},
+year = {2024},
+isbn = {9798400707247},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3673791.3698408},
+doi = {10.1145/3673791.3698408},
+abstract = {In recommender systems, the retrieval phase is at the first stage and of paramount importance, requiring both effectiveness and very high efficiency. Recently, generative retrieval methods such as DSI and NCI, offering the benefit of end-to-end differentiability, have become an emerging paradigm for document retrieval with notable performance improvement, suggesting their potential applicability in recommendation scenarios. A fundamental limitation of these methods is their approach of generating item identifiers as text inputs, which fails to capture the intrinsic semantics of item identifiers as indices. The structural aspects of identifiers are only considered in construction and ignored during training. In addition, generative retrieval methods often generate imbalanced tree structures and yield identifiers with inconsistent lengths, leading to increased item inference time and sub-optimal performance. We introduce a novel generative retrieval framework named SEATER, which learns SEmAntic Tree-structured item identifiERs using an encoder-decoder structure. To optimize the structure of item identifiers, SEATER incorporates two contrastive learning tasks to ensure the alignment of token embeddings and the ranking orders of similar identifiers. In addition, SEATER devises a balanced k-ary tree structure of item identifiers, thus ensuring consistent semantic granularity and inference efficiency. Extensive experiments on three public datasets and an industrial dataset have demonstrated that SEATER outperforms a number of state-of-the-art models significantly.},
+booktitle = {Proceedings of the 2024 Annual International ACM SIGIR Conference on Research and Development in Information Retrieval in the Asia Pacific Region},
+pages = {154–163},
+numpages = {10},
+keywords = {contrastive learning, generative retrieval, recommendation},
+location = {Tokyo, Japan},
+series = {SIGIR-AP 2024}
 }
 ```
