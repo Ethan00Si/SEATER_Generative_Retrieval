@@ -12,6 +12,9 @@ The overview is illustrated as follows:
 | ![Image 1](asset/model.png) | ![Image 2](asset/identifiers.png) |
 |------------------------|------------------------|
 
+## ⭐ Best Paper Award
+
+This paper got the best paper award in SIGIR-AP 2024. Many thanks to the reviewers and organizers of SIGIR-AP 2024.
 
 
 ## Reproducibility
@@ -94,3 +97,5 @@ location = {Tokyo, Japan},
 series = {SIGIR-AP 2024}
 }
 ```
+
+Addtionally, I want to say thanks for the valuable discussion with my colleague Peitian Zhang.
